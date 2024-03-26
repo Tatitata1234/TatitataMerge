@@ -66,11 +66,6 @@ function App() {
     const colunhaUma = selecionadas[1] % 4
 
     const mapaTemporario = mapa
-    console.log(mapa)
-    console.log(linhaZero + "-" + colunhaZero)
-    console.log(linhaUma + "-" + colunhaUma)
-    console.log(mapaTemporario[linhaZero][colunhaZero])
-    console.log(mapaTemporario[linhaUma][colunhaUma])
     if (linhaZero === linhaUma && colunhaZero === colunhaUma) {
       setMensagemErro('Selecione mais de um item!')
       setErro('erro')
@@ -80,7 +75,6 @@ function App() {
       setErro('erro')
       return
     } else if (mapaTemporario[linhaZero][colunhaZero].tipo === 'num') {
-      console.log("dentro if")
       const tipo = Math.floor(Math.random() * 2) + 1;
       let objeto
       if (tipo === 1) {
@@ -96,7 +90,6 @@ function App() {
       }
       mapaTemporario[linhaZero][colunhaZero] = objeto;
       mapaTemporario[linhaUma][colunhaUma].valor *= 2;
-      console.log("mapa" + mapaTemporario[linhaZero][colunhaZero])
     } else {
       const tipo = Math.floor(Math.random() * 2) + 1;
       let objeto
@@ -133,7 +126,6 @@ function App() {
           return (
             <div key={indexlinha} className='linhaCaixa'>
               {linha.map((item, indexcoluna) => {
-                //console.log(item)
                 return (
                   <ImprimeNumeros key={indexlinha * 4 + indexcoluna} chave={indexlinha * 4 + indexcoluna} objeto={item} selecionadas={selecionadas} setSelecionadas={setSelecionadas} />
                 )
