@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.linhaCaixa{
+  display: flex;
+  flex-direction: row;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(77, 77, 77);
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(77, 77, 77);
+}
+.botoes{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  padding: 50px;
+}
+.botaoMerge:hover{
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.botaoMerge{
+  background-color: rgb(252, 252, 252);
+  border-radius: 100%;
+  border: 3px solid rgb(255, 255, 255);
+}
+.botoes:disabled{
+  background-color: black;
+}
+button{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mensagem-sucesso{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mensagem-erro{
+  color: red;
+  text-decoration: underline;
 }
