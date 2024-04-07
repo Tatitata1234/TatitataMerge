@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './imprimeNumero.css'
-import { alfabeto } from '../App';
 
 export function ImprimeNumeros({ chave, objeto, selecionadas, setSelecionadas }) {
   const cor = `cor-${objeto.valor}`;

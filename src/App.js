@@ -55,7 +55,7 @@ function App() {
   }, [inicioTela])
 
   function onClickMerge() {
-    if(selecionadas[0]===-1 || selecionadas[1]===-1){
+    if (selecionadas[0] === -1 || selecionadas[1] === -1) {
       setMensagemErro('Selecione 2 itens para fazer o merge!')
       setErro('erro')
       return
@@ -127,7 +127,13 @@ function App() {
             <div key={indexlinha} className='linhaCaixa'>
               {linha.map((item, indexcoluna) => {
                 return (
-                  <ImprimeNumeros key={indexlinha * 4 + indexcoluna} chave={indexlinha * 4 + indexcoluna} objeto={item} selecionadas={selecionadas} setSelecionadas={setSelecionadas} />
+                  <ImprimeNumeros
+                    key={indexlinha * 4 + indexcoluna}
+                    chave={indexlinha * 4 + indexcoluna}
+                    objeto={item}
+                    selecionadas={selecionadas}
+                    setSelecionadas={setSelecionadas}
+                  />
                 )
               })}
             </div>
