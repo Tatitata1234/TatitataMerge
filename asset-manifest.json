@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TatitataMerge/static/css/main.a57ad421.css",
-    "main.js": "/TatitataMerge/static/js/main.c62ac1ab.js",
+    "main.js": "/TatitataMerge/static/js/main.cf2f89c5.js",
     "static/js/453.5289645d.chunk.js": "/TatitataMerge/static/js/453.5289645d.chunk.js",
     "index.html": "/TatitataMerge/index.html",
     "main.a57ad421.css.map": "/TatitataMerge/static/css/main.a57ad421.css.map",
-    "main.c62ac1ab.js.map": "/TatitataMerge/static/js/main.c62ac1ab.js.map",
+    "main.cf2f89c5.js.map": "/TatitataMerge/static/js/main.cf2f89c5.js.map",
     "453.5289645d.chunk.js.map": "/TatitataMerge/static/js/453.5289645d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a57ad421.css",
-    "static/js/main.c62ac1ab.js"
+    "static/js/main.cf2f89c5.js"
   ]
 }
