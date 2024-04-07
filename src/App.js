@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { ImprimeNumeros } from './ui/imprimeNumeros';
 import add from './assets/add.png'
+import AdSense from 'react-adsense';
 
 export const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 function App() {
@@ -147,6 +148,13 @@ function App() {
 
         </div>
       </div>
+      <AdSense.Google
+        client='ca-pub-7882335870510969'
+        slot='XXXXXXXXXX'
+        style={{ display: 'block' }}
+        format='auto'
+        responsive='true'
+      />
     </div>
   );
 }
