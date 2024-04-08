@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: row;
 }
-.body{
+.body-div{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rgb(77, 77, 77);
-  height: 100vh;
+  height: 80%;
 }
 .header{
   display: flex;
@@ -16,6 +16,15 @@
   justify-content: center;
   color: rgb(255, 255, 255);
   background-color: rgb(77, 77, 77);
+  height: 10%;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(77, 77, 77);
+  height: 10%;
 }
 .botoes{
   display: flex;
@@ -23,7 +32,6 @@
   align-items: center;
   justify-content: space-around;
   width: 300px;
-  padding: 50px;
 }
 .botaoMerge:hover{
   border: 3px solid rgb(0, 0, 0);
@@ -53,3 +61,13 @@ button{
   color: red;
   text-decoration: underline;
 }
+.App{
+  height: 100%;
+}
+#root{
+  height: 100%;
+}
+head{
+  height: 0;
+}
+

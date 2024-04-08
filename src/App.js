@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import add from './assets/add.png';
 import { ImprimeNumeros } from './ui/imprimeNumeros';
-import add from './assets/add.png'
-import AdSense from 'react-adsense';
+
 
 export const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 function App() {
@@ -19,6 +19,20 @@ function App() {
   const mensagemDefault = 'Selecione dois itens e clique no botão abaixo!'
   const [mensagemErro, setMensagemErro] = useState(mensagemDefault)
   const [erro, setErro] = useState('sucesso')
+
+  useEffect(() => {
+    async function fetch() {
+      setRecarrega(false);
+    }
+    fetch()
+  }, [recarrega])
+
+  useEffect(() => {
+    async function fetch() {
+      preencherMapa()
+    }
+    fetch()
+  }, [inicioTela])
 
   function preencherMapa() {
     const mapaVazio = [linhaUm, linhaDois, linhaTres, linhaQuatro]
@@ -40,20 +54,6 @@ function App() {
     })
     setMapa(mapaPreenchido)
   }
-
-  useEffect(() => {
-    async function fetch() {
-      setRecarrega(false);
-    }
-    fetch()
-  }, [recarrega])
-
-  useEffect(() => {
-    async function fetch() {
-      preencherMapa()
-    }
-    fetch()
-  }, [inicioTela])
 
   function onClickMerge() {
     if (selecionadas[0] === -1 || selecionadas[1] === -1) {
@@ -115,14 +115,12 @@ function App() {
     setRecarrega(true)
   }
 
-
-
   return (
     <div className="App">
       <div className='header'>
         <p>TatitataMerge</p>
       </div>
-      <div className='body'>
+      <div className='body-div'>
         {mapa.map((linha, indexlinha) => {
           return (
             <div key={indexlinha} className='linhaCaixa'>
@@ -141,20 +139,14 @@ function App() {
           )
         })}
         <p className={`mensagem-${erro}`}>{mensagemErro}</p>
+      </div>
+      <div className='footer'>
         <div className='botoes'>
           <button onClick={onClickMerge} disabled={botoesDesligados} className='botaoMerge'>
             <img src={add} alt="Botão de merge" />
           </button>
-
         </div>
       </div>
-      <AdSense.Google
-        client='ca-pub-7882335870510969'
-        slot='XXXXXXXXXX'
-        style={{ display: 'block' }}
-        format='auto'
-        responsive='true'
-      />
     </div>
   );
 }
